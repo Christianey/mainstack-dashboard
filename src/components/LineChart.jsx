@@ -15,7 +15,6 @@ import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import { Flex } from "@chakra-ui/react";
 dayjs.extend(customParseFormat);
-// import FullPageLoader from "./fullPageLoader";
 
 //ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 ChartJS.register(

@@ -1,11 +1,4 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import {
-  Tag,
-  TagLabel,
-  TagLeftIcon,
-  TagRightIcon,
-  TagCloseButton,
-} from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { MdOutlineInfo } from "react-icons/md";
 import ChipSelector from "../components/ChipSelector";

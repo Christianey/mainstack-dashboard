@@ -2,14 +2,12 @@ import {
   List,
   ListItem,
   ListIcon,
-  Box,
   IconButton,
   Image,
   Flex,
   Text,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { MdCheckCircle, MdSettings } from "react-icons/md";
 import {
   MdOutlineDashboard,
   MdOutlinePeopleAlt,
