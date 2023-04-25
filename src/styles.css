@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Sohne";
+  src: local("CustomFont2Name"),
+    url("./fonts/TestSöhne-Buch.otf") format("woff"),
+    url("./fonts/TestSöhne-Dreiviertelfett.otf") format("woff2"),
+    url("./fonts/TestSöhne-Extrafett.otf") format("woff2");
+}
