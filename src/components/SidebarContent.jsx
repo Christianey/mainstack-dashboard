@@ -33,7 +33,6 @@ const navItems = [
   {
     text: "Item 4",
     icon: MdOutlineAddAPhoto,
-    // style={{ transform: "scaleX(-1)" }}
   },
   { text: "Item 5", icon: MdDeleteOutline },
   { text: "OTHERS 2", icon: null },
@@ -45,6 +44,10 @@ const navItems = [
 const SidebarContent = ({ onClose }) => {
   const [isMobile] = useMediaQuery("max-width: 30em");
 
+  const linkPath = (text) => {
+    if(text.replaceAll(" ", "").toLowerCase() === "dashboard") return "/"
+    return `/${text.replaceAll(" ", "").toLowerCase()}`
+  }
   return (
     <>
       <Flex grow={1} direction="column" minH={"100dvh"} width="100%" py={2}>
@@ -54,7 +57,7 @@ const SidebarContent = ({ onClose }) => {
           w="100%"
           px={[10, 8]}
         >
-          <Link to="/dashboard">
+          <Link to="/">
             <Image
               boxSize={"40px"}
               display="block"
@@ -89,7 +92,7 @@ const SidebarContent = ({ onClose }) => {
                 key={text}
                 display="flex"
                 alignItems="center"
-                to={`/${text.replaceAll(" ", "").toLowerCase()}`}
+                to={linkPath(text)}
                 style={({ isActive }) =>
                   isActive
                     ? {

@@ -70,11 +70,9 @@ function LineChart({ data }) {
   const views = Object.values(data.graph_data.views).map((value) => {
     return value * 10;
   });
-  console.log({ datas: datafun(dates, views) });
 
   useEffect(() => {
     const chart = chartRef.current;
-    console.log({ chart });
 
     if (!chart) {
       return;

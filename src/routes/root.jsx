@@ -6,7 +6,6 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
 import { MdMenu } from "react-icons/md";
 import { Outlet } from "react-router-dom";
 // import Dashboard from "./components/Dashboard";
@@ -16,18 +15,7 @@ import SidebarContent from "../components/SidebarContent";
 import theme from "../theme";
 
 function Root() {
-  const [data, setData] = useState(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  useEffect(() => {
-    async function getData() {
-      const response = await fetch("https://fe-task-api.mainstack.io/");
-      const result = await response.json();
-      setData(result);
-    }
-
-    getData();
-  }, []);
 
   return (
     <ChakraProvider resetCSS theme={theme}>
